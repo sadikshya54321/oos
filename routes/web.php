@@ -14,3 +14,28 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Dashboard
+Route::get('/dashboard' ,"DashboardController@Index");
+
+//Categories
+Route::post('/categories/save' , "CategoriesController@Save");
+Route::get('/categories', "CategoriesController@Index");
+
+
+//Customers
+Route::post('/customers/save' , "CustomersController@Save");
+Route::get('/customers/read', "CustomersController@Index");
+
+
+//Products
+Route::post('/products/save' , "ProductsController@Save");
+Route::get('/products/read', "ProductsController@Index");
+
+
+//Sales
+Route::post('/sales/save' , "SalesController@Save");
+Route::get('/sales/read', "SalesController@Index");
+
+
+
