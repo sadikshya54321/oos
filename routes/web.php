@@ -25,7 +25,8 @@ Route::get('/categories', "CategoriesController@Index");
 
 //Customers
 Route::post('/customers/save' , "CustomersController@Save");
-Route::get('/customers/read', "CustomersController@Index");
+Route::get('/customers', "CustomersController@Index");
+//Route::get('/customers/read', "CustomersController@Index");
 
 
 //Products

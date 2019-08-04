@@ -9,13 +9,13 @@
 				<a class="nav-link" href="/categories">Category<span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="#">Customers<span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="/customers">Customers<span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="#">Products<span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="/products">Products<span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="#">Sales<span class="sr-only">(current)</span></a>
+				<a class="nav-link" href="sale">Sales<span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#">Link</a>

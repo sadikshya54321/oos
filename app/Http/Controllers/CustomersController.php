@@ -3,14 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\customer;
+use App\Customer;
 
 class CustomersController extends Controller
 {
     //
     public function Index() {
-    	return view('customers.index');
+        $cusArray=customer::all();
+    	return view('customers.index',compact('cusArray'));
     }
+    
    // public function Create(){
 		//return view('customers.customer');
 	//}
@@ -20,10 +22,10 @@ class CustomersController extends Controller
 		echo $request->get('phone');
 	}
 	
-    public function read(){
+   // public function read(){
     	//model name 
-    	$cus=customer::find(1);
+    	//$cus=customer::find(1);
     	//view file
-    	return view("customers.customer",compact('customer'));
-    }
+    	//return view("customers.customer",compact('cus'));
+  //  }
 }
