@@ -31,7 +31,7 @@ Route::get('/customers', "CustomersController@Index");
 
 //Products
 Route::post('/products/save' , "ProductsController@Save");
-Route::get('/products/read', "ProductsController@Index");
+Route::get('/products', "ProductsController@Index");
 
 
 //Sales

@@ -17,3 +17,4 @@ class CategoriesController extends Controller
 		echo $request->get('name');
 	}
 }
+   

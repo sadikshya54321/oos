@@ -3,22 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\product;
+use App\Product;
 
 class ProductsController extends Controller
 {
-     public function Create(){
-		return review('create');
+     public function Index(){
+		$proArray=product::all();
+    	return view('products.index', compact('proArray'));
 	}
 	public function Save(Request $request){
 		echo $request->get('category_id');
 		echo $request->get('products_name');
 	}
 	
-    public function read(){
+   // public function read(){
     	//model name 
-    	$prod=product::find(1);
+    	//$prod=product::find(1);
     	//view file
-    	return view("product");
-    }
+    	//return view("product");
+   // }
 }
