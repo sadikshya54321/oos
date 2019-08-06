@@ -69,7 +69,7 @@
                     Online Ordering System
                 </div>
                 <div >
-                    <a href="/dashboard">Enter</a>
+                    <a href="/customers/dashboard" class="btn btn-success">Customer Login</a> &nbsp; <a href="/dashboard" class="btn btn-info">Admin Login</a> 
                 </div>   
         </div>
     </body>

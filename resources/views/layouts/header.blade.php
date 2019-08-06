@@ -15,14 +15,11 @@
 				<a class="nav-link" href="/products">Products<span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item active">
-				<a class="nav-link" href="sale">Sales<span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#">Link</a>
+				<a class="nav-link" href="sales">Sales<span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			Dropdown
+			Reports
 		</a>
 		<dix class="dropdown-menu" aria-labelledby="navbarDropdown">
 			<a class="dropdown-item" href="#">Action</a>
@@ -30,9 +27,6 @@
 			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#"> Something else here</a>
 		</dix>
-	</li>
-	<li class="nav-item">
-		<a class="nav-link disabled" href="#">Disabled</a>
 	</li>
 </ul>
 </div>

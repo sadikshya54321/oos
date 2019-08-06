@@ -3,18 +3,46 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\sale;
+use App\Sale;
 class SalesController extends Controller
 {
-    public function Create(){
-		return review('create');
+    public function Index(){
+		  $salArray=Sale::all();
+    	return view('sales.index', compact('salArray'));
 	}
-	public function Save(Request $request){
-		echo $request->get('sales_id');
-		echo $request->get('amount');
+
+	public function create(){
+		return view("sales.form");
 	}
-	public function read(){
-		$name="categories name";
-		return view("read",compact('name'));
-	}
+
+	public function edit($id){
+        $salArray =Sale::find($id);
+        return view('sales.edit', compact('salArray'));
+    }
+
+    public function update(Request $request, $id){
+        $sale = Sale::find($id);
+        $sale->sales_id =$request->sales_id;
+        $sale->amount =$request->amount;
+      	$sale->save();
+         return redirect('/sales');
+    }
+
+     public function getSale(){
+      $salArray=Sale::all(); 
+      return view("sales.edit",compact("salArray"));
+     }
+
+     public function save(Request $request){
+  	   $sale =new Sale();
+       $sale->sales_id=$request->sales_id;
+       $sale->amount=$request->amount;
+  	   if($sale->save()){
+              echo "<script>alert('added successfully')</script>";
+        }
+        else{
+            echo "<script>alert('not added')</script>";
+        }
+       return redirect("sales");
+    }
 }

@@ -1,20 +1,23 @@
 @extends('layouts.layout')
 @section('content')
 
-<a href="/categories/create-form" class="btn btn-info">new category</a><br/><br/>
+<a href="/sales/create" class="btn btn-info">new sales</a><br/><br/>
 <table class="table table-striped">
 	<tr>
 		<th>SN
 		</th>
-		<th>Name
+		<th>salesID
+		</th>
+		<th>amount
 		</th>
 	</tr>
 
 <?php $i = 1; ?>
-<?php foreach($catArray as $cat) { ?>
+<?php foreach($salArray as $sal) { ?>
    <tr>
    	<td><?php echo $i++ ?></td>
-	<td><?php echo $cat->name;?></td>
+	<td><?php echo $sal->sales_id;?></td>
+	<td><?php echo $sal->amount;?></td>
    </tr>
 <?php }
 ?>

@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 
-<a href="/customers/create-form" class="btn btn-info">new customer</a><br/><br/>
+<a href="/customers/create" class="btn btn-info">new customer</a><br/><br/>
 <table class="table table-striped">
 	<tr>
 		<th>SN
