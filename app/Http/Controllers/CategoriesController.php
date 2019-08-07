@@ -29,8 +29,8 @@ class CategoriesController extends Controller
          return redirect('/categories');
     }
 
-    public function GetCategoriesDetail(){
-        $catArray = Category::find(1);
+    public function GetCategoriesDetail($id){
+        $catArray = Category::find($id);
         echo $catArray->name;
     }
     public function GetCat(){

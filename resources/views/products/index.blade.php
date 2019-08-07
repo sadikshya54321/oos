@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 
-<a href="/products/create" class="btn btn-info">new products</a><br/><br/>
+<a href="/products/create" class="btn btn-info">new product</a><br/><br/>
 <table class="table table-striped">
 	<tr>
 		<th>SN
@@ -10,7 +10,7 @@
 		</th>
 		<th>productsname
 		</th>
-		<th>productssize
+		<th>productsweight
 		</th>
 		<th>price
 		</th>
@@ -24,7 +24,7 @@
    	<td><?php echo $i++ ?></td>
 	<td><?php echo $pro->category_id;?></td>
 	<td><?php echo $pro->products_name; ?></td>
-   	<td><?php echo $pro->products_size; ?></td>
+   	<td><?php echo $pro->products_weight; ?></td>
    	<td><?php echo $pro->price; ?></td>
    	<td>
 		<a href="/products/edit/<?php echo $pro->id ?>">edit</a>&nbsp;

@@ -25,7 +25,7 @@ class ProductsController extends Controller
         $prod = Product::find($id);
          $prod->category_id=$request->category_id;
          $prod->products_name=$request->products_name;
-         $prod->products_size=$request->products_size;
+         $prod->products_weight=$request->products_weight;
          $prod->price=$request->price;
                  $prod->save();
          return redirect('/products');
@@ -40,7 +40,7 @@ class ProductsController extends Controller
         $produ=new Product();
         $produ->category_id=$request->category_id;
         $produ->products_name=$request->products_name;
-        $produ->products_size=$request->products_size;
+        $produ->products_weight=$request->products_weight;
         $produ->price=$request->price;
          if($produ->save()){
             echo "<script>alert('added successfully')</script>";
@@ -52,11 +52,11 @@ class ProductsController extends Controller
         return redirect("products");
 	}
 	
-    public function GetProductsDetail(){
-        $proArray=Product::find(1);
+    public function GetProductsDetail(Request $request,$id){
+        $proArray=Product::find($id);
         echo $proArray->category_id;
         echo $proArray->products_name;
-        echo $proArray->products_size;
+        echo $proArray->products_weight;
         echo $proArray->price;
     }
 

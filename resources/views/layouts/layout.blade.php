@@ -4,9 +4,6 @@
 		background: white;
 		padding:10px 10px;
 	}
-	.bg-dark{
-		background-color:#E74C3C!important;
-	}
 </style>
 @include('layouts.header')
 <br/>

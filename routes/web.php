@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 //Dashboard
 Route::get('/dashboard' ,"DashboardController@Index");
+Route::get('/home', "HomeController@Index");
+Route::get('/search/cat/{id}', "SearchController@FindByCategory")
 
 //Categories
 Route::post('/categories/save' , "CategoriesController@Save");
