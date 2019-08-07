@@ -1,9 +1,11 @@
 @extends('layouts.layout')
-<form action="/salesdetail/update/<?php echo $sal->id?>" method="POST" >
+@section('content')
+<form action="/sales/update/<?php echo $sale->id?>" method="POST" >
 	@csrf
-	SalesId:<input type="text" name="sales_id" value="<?php echo $sal->sales_id;?>"/>
-	Amount:<input type="text" name="amount" value="<?php echo $sal->amount;?>"/>
+	SalesId:<input type="text" name="sales_id" value="<?php echo $sale->sales_id;?>"/>
+	Amount:<input type="text" name="amount" value="<?php echo $sale->amount;?>"/>
 	
 	<input type="submit" value="update"/>
 </form>
+@endsection
   

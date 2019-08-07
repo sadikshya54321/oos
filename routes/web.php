@@ -52,7 +52,7 @@ Route::get('/products/getproductsdetail', "ProductsController@GetProductsDetail"
 
 
 //Sales
-Route::post('/sales/save' , "SalesController@save");
+Route::post('/sales/save' , "SalesController@Save");
 Route::get('/sales', "SalesController@Index");
 Route::get('/sales/create', "SalesController@create");
 Route::get('/sales/edit/{id}', "SalesController@edit");
@@ -61,12 +61,4 @@ Route::get('/sales/delete/{id}', "SalesController@delete");
 Route::get('/sales/getall', "SalesController@GetSal");
 
 
-//Salesdetail
-Route::post('/salesdetail/save', "SalesdetailsController@save");
-Route::get('/salesdetail', "SalesdetailsController@Index");
-Route::get('/salesdetail/create', "SalesdetailsController@create");
-Route::get('/salesdetail/edit/{id}', "SalesdetailsController@edit");
-Route::post('/salesdetail/update/{id}', "SalesdetailsController@update");
-Route::get('/salesdetail/delete/{id}',"SalesdetailsController@delete" );
-Route::get('/salesdetail/getall', "SalesdetailsController@GetSalD");
 

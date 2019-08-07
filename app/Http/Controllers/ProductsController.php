@@ -17,18 +17,18 @@ class ProductsController extends Controller
     }
 
     public function edit($id){
-        $proArray =Product::find($id);
-        return view('products.edit', compact('proArray'));
+        $prod =Product::find($id);
+        return view('products.edit', compact('prod'));
     }
 
     public function update(Request $request, $id){
-        $proArray = Product::find($id);
-        echo $proArray->category_id=$request->category_id;
-        echo $proArray->products_name=$request->products_name;
-        echo $proArray->products_size=$request->products_size;
-        echo $proArray->price=$request->price;
-                 $proArray->save();
-         return redirect('/product/getall');
+        $prod = Product::find($id);
+         $prod->category_id=$request->category_id;
+         $prod->products_name=$request->products_name;
+         $prod->products_size=$request->products_size;
+         $prod->price=$request->price;
+                 $prod->save();
+         return redirect('/products');
     }
 
     public function GetProducts(){
@@ -37,12 +37,12 @@ class ProductsController extends Controller
     }
 
 	public function Save(Request $request){
-        $proArray1=new Product();
-        $proArray1->category_id=$request->category_id;
-        $proArray1->products_name=$request->products_name;
-        $proArray1->products_size=$request->products_size;
-        $proArray1->price=$request->price;
-         if($proArray1->save()){
+        $produ=new Product();
+        $produ->category_id=$request->category_id;
+        $produ->products_name=$request->products_name;
+        $produ->products_size=$request->products_size;
+        $produ->price=$request->price;
+         if($produ->save()){
             echo "<script>alert('added successfully')</script>";
         }
         else{
@@ -59,5 +59,11 @@ class ProductsController extends Controller
         echo $proArray->products_size;
         echo $proArray->price;
     }
+
+    public function delete($id){
+        $ret = Product::findOrFail($id)->delete();
+        return redirect('/products');
+    }
+
    
 }

@@ -22,5 +22,5 @@
    </tr>
 <?php }
 ?>
-</table>
+</table> 
 @endsection   

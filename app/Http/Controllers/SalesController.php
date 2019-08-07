@@ -16,8 +16,8 @@ class SalesController extends Controller
 	}
 
 	public function edit($id){
-        $salArray =Sale::find($id);
-        return view('sales.edit', compact('salArray'));
+        $sale =Sale::find($id);
+        return view('sales.edit', compact('sale'));
     }
 
     public function update(Request $request, $id){
@@ -45,4 +45,10 @@ class SalesController extends Controller
         }
        return redirect("sales");
     }
+
+    public function delete($id){
+        $ret = Sale::findOrFail($id)->delete();
+        return redirect('/sales');
+    }
+
 }

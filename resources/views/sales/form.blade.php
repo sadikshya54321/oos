@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-<form action="/salesdetail/save" method="post">
+<form action="/sales/save" method="post">
 	@csrf
 	<table>
 		<tr>
@@ -14,4 +14,4 @@
    		</tr>
    	</table>
 </form>
-@endsection
+@endsection 

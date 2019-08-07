@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Customer;
+use App\Customer;  
 
 class CustomersController extends Controller
 {
@@ -18,17 +18,17 @@ class CustomersController extends Controller
 	   }
 
      public function edit($id){
-        $cusArray =Customer::find($id);
-        return view('customers.edit', compact('cusArray'));
+        $custo =Customer::find($id);
+        return view('customers.edit', compact('custo'));
     }
     public function update(Request $request, $id){
         $cusArray = Customer::find($id);
-        echo $cusArray->name=$request->name;
-        echo $cusArray->address=$request->address;
-        echo $cusArray->phone=$request->phone;
+        $cusArray->name=$request->name;
+        $cusArray->address=$request->address;
+       $cusArray->phone=$request->phone;
 
          $cusArray->save();
-         return redirect('/customer/getall');
+         return redirect('/customers');
     }
 
     public function GetCus(){
@@ -52,6 +52,9 @@ class CustomersController extends Controller
       return redirect("customers");
     }
 	
-	
+	 public function delete($id){
+        $ret = Customer::findOrFail($id)->delete();
+        return redirect('/customers');
+    }
    
 }

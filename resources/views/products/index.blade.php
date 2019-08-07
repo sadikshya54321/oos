@@ -14,6 +14,8 @@
 		</th>
 		<th>price
 		</th>
+		<th>
+		</th>
 	</tr>
 
 <?php $i = 1; ?>
@@ -24,6 +26,9 @@
 	<td><?php echo $pro->products_name; ?></td>
    	<td><?php echo $pro->products_size; ?></td>
    	<td><?php echo $pro->price; ?></td>
+   	<td>
+		<a href="/products/edit/<?php echo $pro->id ?>">edit</a>&nbsp;
+		<a href="/products/delete/<?php echo $pro->id ?>">delete</a></td>
    </tr>
 <?php }
 ?>

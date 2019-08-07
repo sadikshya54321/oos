@@ -12,6 +12,8 @@
 		</th>
 		<th>Phone
 		</th>
+		<th>
+		</th>
 
 	</tr>
 
@@ -22,9 +24,11 @@
 	<td><?php echo $cus->name;?></td>
 	<td><?php echo $cus->address;?></td>
 	<td><?php echo $cus->phone;?></td>
-
+	<td>
+		<a href="/customers/edit/<?php echo $cus->id ?>">edit</a>&nbsp;
+		<a href="/customers/delete/<?php echo $cus->id ?>">delete</a></td>
    </tr>
 <?php }
 ?>
 </table>
-@endsection
+@endsection 

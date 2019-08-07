@@ -16,16 +16,16 @@ class CategoriesController extends Controller
 	public function create(){
 		return view("categories.form");
 	}
-
+  
 	public function edit($id){
         $cat =Category::find($id);
         return view('categories.edit', compact('cat'));
     }
 
     public function update(Request $request, $id){
-        $catArray = Category::find($id);
-        echo $catArray->name=$request->name;
-         $catArray->save();
+        $cate = Category::find($id);
+        $cate->name=$request->name;
+         $cate->save();
          return redirect('/categories');
     }
 
@@ -39,9 +39,9 @@ class CategoriesController extends Controller
      }
 
      public function save(Request $request){
-    	$catArray1=new Category();
-    	$catArray1->name=$request->name;
-        if($catArray1->save()){
+    	$cate1=new Category();
+    	$cate1->name=$request->name;
+        if($cate1->save()){
             echo "<script>alert('added successfully')</script>";
         }
         else{
