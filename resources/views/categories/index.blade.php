@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 
-<a href="/categories/create" class="btn btn-info">new category</a><br/><br/>
+<a href="/admin/categories/create" class="btn btn-info">new category</a><br/><br/>
 <table class="table table-striped">
 	<tr>
 		<th>SN
@@ -17,10 +17,10 @@
    	<td><?php echo $i++ ?></td>
 	<td><?php echo $cat->name;?></td>
 	<td>
-		<a href="/categories/edit/<?php echo $cat->id ?>">edit</a>&nbsp;
-		<a href="/categories/delete/<?php echo $cat->id ?>">delete</a></td>
+		<a href="/admin/categories/edit/<?php echo $cat->id ?>">Edit</a>&nbsp;
+		<a href="/admin/categories/delete/<?php echo $cat->id ?>">Delete</a></td>
    </tr>
 <?php }
 ?>
 </table> 
-@endsection   
+@endsection     

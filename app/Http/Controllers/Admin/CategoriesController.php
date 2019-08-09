@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Category;
@@ -26,7 +26,7 @@ class CategoriesController extends Controller
         $cate = Category::find($id);
         $cate->name=$request->name;
          $cate->save();
-         return redirect('/categories');
+         return redirect('/admin/categories');
     }
 
     public function GetCategoriesDetail($id){
@@ -48,12 +48,12 @@ class CategoriesController extends Controller
             echo "<script>alert('not added')</script>";
         }
         
-    	return redirect("categories");
+    	return redirect("/admin/categories");
     }
 
      public function delete($id){
         $ret = Category::findOrFail($id)->delete();
-        return redirect('/categories');
+        return redirect('/admin/categories');
     }
 
 }

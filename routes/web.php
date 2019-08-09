@@ -18,8 +18,9 @@ Route::get('/', function () {
 //Dashboard
 Route::get('/dashboard' ,"DashboardController@Index");
 Route::get('/home', "HomeController@Index");
-Route::get('/search/cat/{id}', "SearchController@FindByCategory")
+Route::get('/search/cat/{id}', "SearchController@FindByCategory");
 
+Route::group(['namespace'=>'Admin','prefix'=>'admin'],function(){
 //Categories
 Route::post('/categories/save' , "CategoriesController@Save");
 Route::get('/categories', "CategoriesController@Index");
@@ -29,8 +30,10 @@ Route::post('/categories/update/{id}',"CategoriesController@update");
 Route::get('/categories/delete/{id}', "CategoriesController@delete");
 Route::get('/categories/getall', "CategoriesController@GetCat");
 Route::get('/categories/getcategoriesdetail', "CategoriesController@GetCategoriesDetail");
+});
 
 //Customers
+Route::group(['namespace'=>'Admin','prefix'=>'admin'],function(){
 Route::post('/customers/save' , "CustomersController@Save");
 Route::get('/customers', "CustomersController@Index");
 Route::get('/customers/create', "CustomersController@create");
@@ -40,8 +43,10 @@ Route::get('/customers/delete/{id}', "CustomersController@delete");
 Route::get('/customers/getall', "CustomersController@GetCus");
 Route::get('/customers/getcustomersdetail', "CustomersController@GetCustomersDetail");
 //Route::get('/customers/read', "CustomersController@Index");
+});
 
 
+Route::group(['namespace'=>'Admin','prefix'=>'admin'],function(){
 //Products
 Route::post('/products/save' , "ProductsController@Save");
 Route::get('/products', "ProductsController@Index");
@@ -51,8 +56,11 @@ Route::post('/products/update/{id}', "ProductsController@update");
 Route::get('/products/delete/{id}', "ProductsController@delete");
 Route::get('/products/getall', "ProductsController@GetProducts");
 Route::get('/products/getproductsdetail', "ProductsController@GetProductsDetail");
+Route:: post('/products/uploadfile', "ProductsController@uploadfile");
+});
 
 
+Route::group(['namespace'=>'Admin','prefix'=>'admin'],function(){
 //Sales
 Route::post('/sales/save' , "SalesController@Save");
 Route::get('/sales', "SalesController@Index");
@@ -61,6 +69,24 @@ Route::get('/sales/edit/{id}', "SalesController@edit");
 Route::post('/sales/update/{id}', "SalesController@update");
 Route::get('/sales/delete/{id}', "SalesController@delete");
 Route::get('/sales/getall', "SalesController@GetSal");
+});
+
+
+
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+//customerside
+Route::get('/product/list',"productssController@productlist");
+Route::get('/orders/list', "OrderController@orderlist");
+Route::get('/payments/list',"PaymentsController@paymentlist");
+
+
+
 
 
 

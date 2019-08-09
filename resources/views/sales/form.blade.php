@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-<form action="/sales/save" method="post">
+<form action="/admin/sales/save" method="post">
 	@csrf
 	<table>
 		<tr>

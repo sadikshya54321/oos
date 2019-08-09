@@ -1,18 +1,20 @@
 @extends('layouts.layout')
 @section('content')
 
-<a href="/products/create" class="btn btn-info">new product</a><br/><br/>
+<a href="/admin/products/create" class="btn btn-info">new product</a><br/><br/>
 <table class="table table-striped">
 	<tr>
 		<th>SN
 		</th>
 		<th>CategoryID
 		</th>
-		<th>productsname
+		<th>Name
 		</th>
-		<th>productsweight
+		<th>Weight
 		</th>
-		<th>price
+		<th>Image
+		</th>
+		<th>Price
 		</th>
 		<th>
 		</th>
@@ -25,10 +27,11 @@
 	<td><?php echo $pro->category_id;?></td>
 	<td><?php echo $pro->products_name; ?></td>
    	<td><?php echo $pro->products_weight; ?></td>
+   	<td><?php echo $pro->image; ?></td>
    	<td><?php echo $pro->price; ?></td>
    	<td>
-		<a href="/products/edit/<?php echo $pro->id ?>">edit</a>&nbsp;
-		<a href="/products/delete/<?php echo $pro->id ?>">delete</a></td>
+		<a href="/admin/products/edit/<?php echo $pro->id ?>">Edit</a>&nbsp;
+		<a href="/admin/products/delete/<?php echo $pro->id ?>">Delete</a></td>
    </tr>
 <?php }
 ?>

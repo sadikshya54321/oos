@@ -11,8 +11,16 @@
 
         <!-- Styles -->
         <style>
+            .ttl{
+                background: #fff;
+                border: 1px #ebe9e9 solid;
+                height: 100px ;
+                width:400px;
+                color: #37568f;
+
+            }
             html, body {
-                background-color: #fff;
+                background-color: #95afe9;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -45,11 +53,11 @@
             }
 
             .title {//online ordering sys ko change garna ko lai
-                font-size: 50px; //changed from 84 to 50 to make online ordering s ko size 
+                font-size: 84px; //changed from 84 to 50 to make online ordering s ko size 
             }
 
             .links > a {
-                color: #636b6f;
+                color: #fff;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -64,13 +72,24 @@
         </style>
     </head>
     <body>
-        <div class="content">
-                <div class="title m-b-md">
-                    Online Ordering System
+        <div class="flex-center position-ref full-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                         <a href="{{url('home') }}"> Home</a>
+                    @else 
+                        <a href="{{ route('login') }}"> Customer Login</a>
+
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}"> Sign up</a>
+                    @endif
+                    @endauth
                 </div>
-                <div >
-                    <a href="/customers/dashboard" class="btn btn-success">Customer Login</a> &nbsp; <a href="/dashboard" class="btn btn-info">Admin Login</a> 
-                </div>   
+                @endif
+                <div>
+                    <img src="first.png" width="900px" height="540px">
+                </div>
+
         </div>
     </body>
 </html>

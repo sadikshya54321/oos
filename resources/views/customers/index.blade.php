@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 
-<a href="/customers/create" class="btn btn-info">new customer</a><br/><br/>
+<a href="/admin/customers/create" class="btn btn-info">new customer</a><br/><br/>
 <table class="table table-striped">
 	<tr>
 		<th>SN
@@ -25,8 +25,8 @@
 	<td><?php echo $cus->address;?></td>
 	<td><?php echo $cus->phone;?></td>
 	<td>
-		<a href="/customers/edit/<?php echo $cus->id ?>">edit</a>&nbsp;
-		<a href="/customers/delete/<?php echo $cus->id ?>">delete</a></td>
+		<a href="/admin/customers/edit/<?php echo $cus->id ?>">Edit</a>&nbsp;
+		<a href="/admin/customers/delete/<?php echo $cus->id ?>">Delete</a></td>
    </tr>
 <?php }
 ?>

@@ -1,7 +1,7 @@
 
 @extends('layouts.layout')
 @section('content')
-<form action="/categories/save" method="post">
+<form action="/admin/categories/save" method="post">
 	@csrf
 	<table>
 		<tr>
@@ -13,4 +13,4 @@
 		</tr>	
 	</table>
 </form>
-@endsection 
+@endsection

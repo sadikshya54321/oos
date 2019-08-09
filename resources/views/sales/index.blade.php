@@ -1,14 +1,14 @@
 @extends('layouts.layout')
 @section('content')
 
-<a href="/sales/create" class="btn btn-info">new sales</a><br/><br/>
+<a href="/admin/sales/create" class="btn btn-info">new sales</a><br/><br/>
 <table class="table table-striped">
 	<tr>
 		<th>SN
 		</th>
 		<th>salesID
 		</th>
-		<th>amount
+		<th>Amount
 		</th>
 
 		<th></th>
@@ -21,8 +21,8 @@
 	<td><?php echo $sal->sales_id;?></td>
 	<td><?php echo $sal->amount;?></td>
 	<td>
-		<a href="/sales/edit/<?php echo $sal->id ?>">edit</a>&nbsp;
-		<a href="/sales/delete/<?php echo $sal->id ?>">delete</a></td>
+		<a href="/admin/sales/edit/<?php echo $sal->id ?>">Edit</a>&nbsp;
+		<a href="/admin/sales/delete/<?php echo $sal->id ?>">Delete</a></td>
    </tr>
 <?php }
 ?>
