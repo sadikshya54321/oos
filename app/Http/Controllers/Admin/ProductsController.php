@@ -39,10 +39,18 @@ class ProductsController extends Controller
 
 	public function Save(Request $request){
         $produ=new Product();
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $name = $image->getClientOriginalName();
+            $destinationPath = public_path('/uploads');
+            $imagePath = $destinationPath. "/".  $name;
+            $image->move($destinationPath, $name);
+            $produ->image = $name;
+        }
+
         $produ->category_id=$request->category_id;
         $produ->products_name=$request->products_name;
         $produ->products_weight=$request->products_weight;
-        $produ->image=$request->image;
         $produ->price=$request->price;
          if($produ->save()){
             echo "<script>alert('added successfully')</script>";

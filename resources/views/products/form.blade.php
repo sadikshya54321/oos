@@ -1,7 +1,7 @@
 
 @extends('layouts.layout')
 @section('content')
-<form action="/admin/products/save" method="post">
+<form action="/admin/products/save" method="post" enctype="multipart/form-data">
 	@csrf
 	<table>
 		<tr>
