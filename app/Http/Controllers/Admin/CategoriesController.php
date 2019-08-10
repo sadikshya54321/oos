@@ -10,16 +10,16 @@ class CategoriesController extends Controller
 {
     public function Index(){
     	$catArray=Category::all();
-    	return view('categories.index', compact('catArray'));
+    	return view('admin.categories.index', compact('catArray'));
 	}
 
 	public function create(){
-		return view("categories.form");
+		return view("admin.categories.form");
 	}
   
 	public function edit($id){
         $cat =Category::find($id);
-        return view('categories.edit', compact('cat'));
+        return view('admin.categories.edit', compact('cat'));
     }
 
     public function update(Request $request, $id){
@@ -35,7 +35,7 @@ class CategoriesController extends Controller
     }
     public function GetCat(){
     	$catArray=Category::all(); 
-    	return view("categories.edit",compact("catArray"));
+    	return view("admin.categories.edit",compact("catArray"));
      }
 
      public function save(Request $request){

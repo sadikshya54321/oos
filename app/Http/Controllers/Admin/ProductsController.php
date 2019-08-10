@@ -9,16 +9,16 @@ class ProductsController extends Controller
 {
      public function Index(){
 		$proArray=Product::all();
-    	return view('products.index', compact('proArray'));
+    	return view('admin.products.index', compact('proArray'));
 	}
 
     public function create(){
-        return view("products.form");
+        return view("admin.products.form");
     }
 
     public function edit($id){
         $prod =Product::find($id);
-        return view('products.edit', compact('prod'));
+        return view('admin.products.edit', compact('prod'));
     }
 
     public function update(Request $request, $id){
