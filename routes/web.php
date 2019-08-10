@@ -32,7 +32,7 @@ Route::get('/search/cat/{id}', "SearchController@FindByCategory");
 
 Route::group(['namespace' => 'Admin', 'prefix'=>'admin'], function() {
 
-    Route::get('/admin' ,"DashboardController@Index");
+    Route::get('/dashboard' ,"DashboardController@Index");
 
     //Categories
     Route::post('/categories/save' , "CategoriesController@Save");
