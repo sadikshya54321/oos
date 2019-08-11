@@ -83,6 +83,9 @@ class ProductsController extends Controller
             echo "<img src='/uploads/".$info['basename']."'/>";
         }
     }
+    public function getaddtocart(Request $request,$id){
+        $proArray=Product::find($id);
+    }
 
    
 }

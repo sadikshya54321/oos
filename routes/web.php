@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 //Dashboard
 Route::get('/dashboard' ,"DashboardController@Index");
 Route::get('/home', "HomeController@Index");
@@ -57,6 +58,7 @@ Route::get('/products/delete/{id}', "ProductsController@delete");
 Route::get('/products/getall', "ProductsController@GetProducts");
 Route::get('/products/getproductsdetail', "ProductsController@GetProductsDetail");
 Route:: post('/products/uploadfile', "ProductsController@uploadfile");
+Route::get('/products/addtocart/{id}', "ProductsController@getaddtocart");
 });
 
 

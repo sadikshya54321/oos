@@ -25,7 +25,7 @@ class SalesController extends Controller
         $sale->sales_id =$request->sales_id;
         $sale->amount =$request->amount;
       	$sale->save();
-         return redirect('/sales');
+         return redirect('/admin/sales');
     }
 
      public function getSale(){
@@ -48,7 +48,7 @@ class SalesController extends Controller
 
     public function delete($id){
         $ret = Sale::findOrFail($id)->delete();
-        return redirect('/sales');
+        return redirect('/admin/sales');
     }
 
 }
