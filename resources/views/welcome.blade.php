@@ -20,7 +20,7 @@
 
             }
             html, body {
-                background-color: #95afe9;
+                background-color: #5e3502;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -87,7 +87,7 @@
                 </div>
                 @endif
                 <div>
-                    <img src="first.png" width="900px" height="540px">
+                
                 </div>
 
         </div>

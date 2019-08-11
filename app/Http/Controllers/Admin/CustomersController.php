@@ -10,16 +10,16 @@ class CustomersController extends Controller
     //
     public function Index() {
         $cusArray=Customer::all();
-    	return view('customers.index',compact('cusArray'));
+    	return view('admin.customers.index',compact('cusArray'));
     }
     
    public function Create(){
-		  return view('customers.form');
+		  return view('admin.customers.form');
 	   }
 
      public function edit($id){
         $custo =Customer::find($id);
-        return view('customers.edit', compact('custo'));
+        return view('admin.customers.edit', compact('custo'));
     }
     public function update(Request $request, $id){
         $cusArray = Customer::find($id);
@@ -33,7 +33,7 @@ class CustomersController extends Controller
 
     public function GetCus(){
       $cusArray=Customer::all(); 
-      return view("customers.edit",compact("cusArray"));
+      return view("admin.customers.edit",compact("cusArray"));
      }
 
       public function save(Request $request){

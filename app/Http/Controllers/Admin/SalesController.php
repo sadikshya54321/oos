@@ -8,16 +8,16 @@ class SalesController extends Controller
 {
     public function Index(){
 		  $salArray=Sale::all();
-    	return view('sales.index', compact('salArray'));
+    	return view('admin.sales.index', compact('salArray'));
 	}
 
 	public function create(){
-		return view("sales.form");
+		return view("admin.sales.form");
 	}
 
 	public function edit($id){
         $sale =Sale::find($id);
-        return view('sales.edit', compact('sale'));
+        return view('admin.sales.edit', compact('sale'));
     }
 
     public function update(Request $request, $id){
@@ -30,7 +30,7 @@ class SalesController extends Controller
 
      public function getSale(){
       $salArray=Sale::all(); 
-      return view("sales.edit",compact("salArray"));
+      return view("admin.sales.edit",compact("salArray"));
      }
 
      public function save(Request $request){

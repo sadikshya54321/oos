@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Hermann') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
@@ -19,9 +19,30 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
+    .bg-white{
+        background:#5e3502 !important;
+    }
+    .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link, .card-header{
+        color:#d9a816e6 !important;
+    }
         body{
-             background-color: #95afe9;
+             background-color: #fff;
         }
+        .card-header{
+            background:#5e3502;
+        }
+        .card-body{
+            border:1px solid #5e3502;
+        }
+        .btn-primary{
+            background:#5e3502;
+            color:#d9a816e6 !important;
+        }
+
+        .btn-primary:hover {
+    background-color: #d9a816e6 !important;
+    color:#5e3502 !important;
+}
     </style>
 </head>
 <body>
@@ -29,7 +50,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    Hermann
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
