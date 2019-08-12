@@ -33,6 +33,11 @@ class SalesController extends Controller
       return view("admin.sales.edit",compact("salArray"));
      }
 
+     public function Detail($id){
+      $salesd=Sale::find($id);
+      return view("admin.sales.detail",compact("salesd"));
+     }
+
      public function save(Request $request){
   	   $sale =new Sale();
        $sale->sales_id=$request->sales_id;

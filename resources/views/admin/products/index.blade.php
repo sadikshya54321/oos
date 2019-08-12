@@ -29,7 +29,7 @@
 	<td><?php echo $pro->category_id;?></td>
 	<td><?php echo $pro->products_name; ?></td>
    	<td><?php echo $pro->products_weight; ?></td>
-   	<td><img src="/uploads/<?php echo $pro->image; ?>  " height="50px" width="100px"/></td>
+   	<td><img src="/uploads/<?php echo $pro->image; ?>  " height="100px" width="150px"/></td>
    	<td><?php echo $pro->price; ?></td>
    	<td>
 		<a href="/admin/products/edit/<?php echo $pro->id ?>">Edit</a>&nbsp;

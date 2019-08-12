@@ -21,8 +21,9 @@
 	<td><?php echo $sal->sales_id;?></td>
 	<td><?php echo $sal->amount;?></td>
 	<td>
-		<a href="/admin/sales/edit/<?php echo $sal->id ?>">Edit</a>&nbsp;
-		<a href="/admin/sales/delete/<?php echo $sal->id ?>">Delete</a></td>
+		<a  class="btn btn-success" href="/admin/sales/edit/<?php echo $sal->id ?>">Edit</a>&nbsp;
+		<a  class="btn btn-danger" href="/admin/sales/delete/<?php echo $sal->id ?>">Delete</a></td>
+		<a  class="btn btn-secondary" href="/admin/sales/detail/<?php echo $sal->id ?>">Detail</a></td>
    </tr>
 <?php }
 ?>

@@ -69,9 +69,11 @@ Route::group(['namespace' => 'Admin', 'prefix'=>'admin'], function() {
     //Sales
     Route::post('/sales/save' , "SalesController@Save");
     Route::get('/sales', "SalesController@Index");
+    Route::get('/sales/detail/{id}', "SalesController@Detail");
     Route::get('/sales/create', "SalesController@create");
     Route::get('/sales/edit/{id}', "SalesController@edit");
     Route::post('/sales/update/{id}', "SalesController@update");
     Route::get('/sales/delete/{id}', "SalesController@delete");
     Route::get('/sales/getall', "SalesController@GetSal");
+
 });
