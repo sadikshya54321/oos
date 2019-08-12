@@ -3,6 +3,7 @@
 
 <a href="/admin/products/create" class="btn btn-info">new product</a><br/><br/>
 <table class="table table-striped">
+	<thead class="thead-dark">
 	<tr>
 		<th>SN
 		</th>
@@ -11,6 +12,7 @@
 		<th>Name
 		</th>
 		<th>Weight
+
 		</th>
 		<th>Image
 		</th>
@@ -19,7 +21,7 @@
 		<th>
 		</th>
 	</tr>
-
+</thead>
 <?php $i = 1; ?>
 <?php foreach($proArray as $pro) { ?>
    <tr>

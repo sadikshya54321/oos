@@ -69,6 +69,29 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            .container {
+                height: 600px;
+                width: 100%;
+                background: #fff !important;
+                color:red;
+            }
+            .prod-img{
+                height:150px;
+                width:150px;
+
+            }
+            .box {
+                background-color: #ebe9e9 !important;
+                background: grey;
+                border: 1px solid #red;
+                margin: 10px 10px;
+
+            }
+            .add-to-cart-btn{
+                background: green;
+                color:#fff;
+
+            }
         </style>
     </head>
     <body>
@@ -89,7 +112,28 @@
                 <div>
                 
                 </div>
+         <div class="container">
+            <span>Our Products</span>
+            <?php foreach($products as $product) { ?>
+                <div class="box">
+                    
+                    <span class="box-title">
+                        <?php echo $product->products_name ?>
+
+                    </span>
+                    <br/>
+                    <span class="box-body">
+                        <img src="/uploads/<?php echo $product->image ?>" class="prod-img"/>
+                        <br/>
+                        RS: <?php echo $product->price ?>
+                        <a href="/site/add-cart" class="add-to-cart-btn">Add To Cart</a>
+                    </span>
+                </div>
+            <?php } ?>
+        </div>
 
         </div>
+
+        
     </body>
 </html>

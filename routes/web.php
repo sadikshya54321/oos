@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',  'SiteController@index');
 
 
 Auth::routes();
@@ -66,6 +64,8 @@ Route::group(['namespace' => 'Admin', 'prefix'=>'admin'], function() {
     Route::get('/products/getall', "ProductsController@GetProducts");
     Route::get('/products/getproductsdetail', "ProductsController@GetProductsDetail");
     Route:: post('/products/uploadfile', "ProductsController@uploadfile");
+
+    
     //Sales
     Route::post('/sales/save' , "SalesController@Save");
     Route::get('/sales', "SalesController@Index");

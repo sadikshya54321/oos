@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\Category;
+
 
 class ProductsController extends Controller
 {
@@ -13,7 +15,8 @@ class ProductsController extends Controller
 	}
 
     public function create(){
-        return view("admin.products.form");
+        $cats=Category::all();
+        return view("admin.products.form", compact('cats'));
     }
 
     public function edit($id){
@@ -34,7 +37,7 @@ class ProductsController extends Controller
 
     public function GetProducts(){
         $proArray=Product::all();
-        return view('products.edit', compact('proArray'));
+        return view('admin.products.edit', compact('proArray'));
     }
 
 	public function Save(Request $request){
@@ -58,7 +61,6 @@ class ProductsController extends Controller
         else{
             echo "<script>alert('not added')</script>";
         }
-        
         return redirect('/admin/products');
 	}
 	
