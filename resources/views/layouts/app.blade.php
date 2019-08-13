@@ -89,8 +89,9 @@
                                 <a class="nav-link" href="/orders/list">{{ __(' My Orders') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/products/list">{{ __('Products') }}</a>
+                                <a class="nav-link" href="/orders/cart">{{ __(' cart') }}(2);?>)</a>
                             </li>
+                            
                         
 
                             <li class="nav-item dropdown">

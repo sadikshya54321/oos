@@ -23,7 +23,9 @@ Route::get('/orders/list', "OrdersController@orderlist");
 Route::get('/payments/list',"PaymentsController@paymentslist");
 
 Route::get('/search/find/{id}', "SearchController@FindByCategory");
-
+Route::get('/orders/cart', "OrdersController@cart");
+Route::get('/orders/add-cart/{id}', "OrdersController@addToCart");
+Route::get('/orders/cart/empty', "OrdersController@emptyCart");
 
 
 

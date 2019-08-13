@@ -71,6 +71,7 @@
                 margin-bottom: 30px;
             }
             .container {
+                margin-top: 50px;
                 height: 600px;
                 width: 100%;
                 background: black;
@@ -136,9 +137,7 @@
                         <img src="/uploads/<?php echo $product->image ?>" class="prod-img"/>
                         <br/>
                         RS: <?php echo $product->price ?>
-                    </span>
-                    <span class="box">
-                        <a href="/site/add-cart" class="add-to-cart-btn">Add To Cart</a>
+                        <a href="/orders/add-cart/<?php echo $product->id ?>" class="add-to-cart-btn">Add To Cart</a>
                         <br/>
 
                     </span>

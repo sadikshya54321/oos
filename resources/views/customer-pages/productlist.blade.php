@@ -49,6 +49,7 @@
             }
             .search-result {
             	background: #fff;
+                color:#B8860B;
             }
 
 </style>
@@ -71,7 +72,7 @@
                         RS: <?php echo $product->price ?>
                     </span>
                     <span class="box">
-                        <a href="/site/add-cart" class="add-to-cart-btn">Add To Cart</a>
+                        <a href="/orders/add-cart" class="add-to-cart-btn">Add To Cart</a>
                         <br/>
 
                     </span>
