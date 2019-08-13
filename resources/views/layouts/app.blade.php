@@ -43,7 +43,14 @@
     background-color: #d9a816e6 !important;
     color:#5e3502 !important;
 }
+    .image1{
+    justify-content: space-between;
+    max-width:100%;
+    height:auto;
+    text-align:center;
+    display:block;
     </style>
+}
 </head>
 <body>
     <div id="app">
@@ -76,10 +83,10 @@
                             @endif
                         @else
                         <li class="nav-item">
-                                <a class="nav-link" href="/payments/list">{{ __('Payemnts') }}</a>
+                                <a class="nav-link" href="/payments/list">{{ __(' My Payments') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/orders/list">{{ __('Orders') }}</a>
+                                <a class="nav-link" href="/orders/list">{{ __(' My Orders') }}</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/products/list">{{ __('Products') }}</a>

@@ -7,11 +7,7 @@ use App\Product;
 
 class ProductsController extends Controller
 {
-    public function index(){
-    	echo "productList";
-    }
-
-    public function Search($keyword) {
-
+    public function productlist(){
+    	return view("customer-pages.productlist");
     }
 }

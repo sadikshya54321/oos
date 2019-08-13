@@ -46,6 +46,7 @@
                 position: absolute;
                 right: 10px;
                 top: 18px;
+                color: white;
             }
 
             .content {
@@ -72,7 +73,7 @@
             .container {
                 height: 600px;
                 width: 100%;
-                background: #fff !important;
+                background: black;
                 color:red;
             }
             .prod-img{
@@ -99,7 +100,16 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                         <a href="{{url('home') }}"> Home</a>
+                         
+                         <?php 
+                         
+                         foreach ($categories as $c) { ?>
+
+                            <a href="/search/find/<?php echo $c->id; ?>"> <?php echo $c->name ?></a>
+                             
+                         <?php } ?>
+                        <a href="{{url('home') }}"> Home</a>
+                         
                     @else 
                         <a href="{{ route('login') }}"> Customer Login</a>
 
@@ -126,7 +136,11 @@
                         <img src="/uploads/<?php echo $product->image ?>" class="prod-img"/>
                         <br/>
                         RS: <?php echo $product->price ?>
+                    </span>
+                    <span class="box">
                         <a href="/site/add-cart" class="add-to-cart-btn">Add To Cart</a>
+                        <br/>
+
                     </span>
                 </div>
             <?php } ?>

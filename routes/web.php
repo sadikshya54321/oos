@@ -18,11 +18,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 //customerside
-Route::get('/product/list',"productssController@productlist");
-Route::get('/orders/list', "OrderController@orderlist");
-Route::get('/payments/list',"PaymentsController@paymentlist");
+Route::get('/products/list',"ProductsController@productlist");
+Route::get('/orders/list', "OrdersController@orderlist");
+Route::get('/payments/list',"PaymentsController@paymentslist");
 
-Route::get('/search/cat/{id}', "SearchController@FindByCategory");
+Route::get('/search/find/{id}', "SearchController@FindByCategory");
 
 
 
