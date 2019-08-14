@@ -11,8 +11,6 @@ class SiteController extends Controller
     	$products = Product::all();
     	$categories= Category::all();
     	return view('welcome', compact('products','categories'));
-    	
-
     }
 
 }

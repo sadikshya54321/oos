@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Hermann Bakery</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -38,6 +38,13 @@
                 justify-content: center;
             }
 
+            .featured {
+                width:1270px;
+                overflow-x: auto;
+                overflow-y: none;
+            }
+
+            
             .position-ref {
                 position: relative;
             }
@@ -74,7 +81,7 @@
                 margin-top: 50px;
                 height: 600px;
                 width: 100%;
-                background: black;
+                background: #a22c2c;
                 color:red;
             }
             .prod-img{
@@ -83,6 +90,7 @@
 
             }
             .box {
+                float:left;
                 background-color: #ebe9e9 !important;
                 background: grey;
                 border: 1px solid #red;
@@ -93,6 +101,10 @@
                 background: green;
                 color:#fff;
 
+            }
+            #product-txt{
+                width:500px;
+                margin-left: 50px;
             }
         </style>
     </head>
@@ -124,11 +136,15 @@
                 
                 </div>
          <div class="container">
-            <span>Our Products</span>
+            
+            <h1><span class="badge badge-info">Delicious Baked</span>
+            </h1>
+             <span>Our Products</span>
+            <div class="row featured">
             <?php foreach($products as $product) { ?>
                 <div class="box">
                     
-                    <span class="box-title">
+                    <span class="badge badge-secondary">
                         <?php echo $product->products_name ?>
 
                     </span>
@@ -143,10 +159,8 @@
                     </span>
                 </div>
             <?php } ?>
-        </div>
-
-        </div>
-
+                 </div>
+            </div>
         
-    </body>
+     </body>
 </html>

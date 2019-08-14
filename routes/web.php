@@ -26,6 +26,8 @@ Route::get('/search/find/{id}', "SearchController@FindByCategory");
 Route::get('/orders/cart', "OrdersController@cart");
 Route::get('/orders/add-cart/{id}', "OrdersController@addToCart");
 Route::get('/orders/cart/empty', "OrdersController@emptyCart");
+Route::get('/cakes/index', "CakesController@index");
+Route::post('/cakes/save', "CakesController@save");
 
 
 

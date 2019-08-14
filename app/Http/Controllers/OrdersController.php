@@ -14,13 +14,13 @@ class OrdersController extends Controller
     	$request->session()->forget('cart-item');
     	echo "deleted";
     }
-    
+
     public function addToCart(Request $request, $id){
     	$products=$request->session()->get('cart-item');
     	$productObj= Product::find($id);
-    	$products[]=array('id' => $id, 'name' =>$productObj->product_name, 'image' =>$productObj->image, 'price' =>$productObj->price);
+    	$products[]=array('id' => $id, 'name' => $productObj->product_name, 'image' => $productObj->image, 'price' => $productObj->price);
     	$request->session()->put('cart-item', $products);
-    	echo "added successfully<a href='/orders'</a>";
+    	echo "added successfully<a href='/orders'></a>";
     }
 
     public function cart(Request $request){
@@ -28,4 +28,6 @@ class OrdersController extends Controller
     	$products=$request->session()->get('cart-item');
     	return  view('customer-pages.cart', compact('products'));
     }
+
+    public function 
 }
