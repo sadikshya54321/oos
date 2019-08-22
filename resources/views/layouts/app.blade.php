@@ -49,8 +49,9 @@
     height:auto;
     text-align:center;
     display:block;
-    </style>
+    
 }
+</style>
 </head>
 <body>
     <div id="app">

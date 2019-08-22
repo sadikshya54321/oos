@@ -29,5 +29,5 @@ class OrdersController extends Controller
     	return  view('customer-pages.cart', compact('products'));
     }
 
-    public function 
+    
 }
