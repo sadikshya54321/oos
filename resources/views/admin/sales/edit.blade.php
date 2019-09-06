@@ -2,7 +2,7 @@
 @section('content')
 <form action="/admin/sales/update/<?php echo $sale->id?>" method="POST" >
 	@csrf
-	SalesId:<input type="text" name="sales_id" value="<?php echo $sale->sales_id;?>"/>
+	CustomerId:<input type="text" name="customer_id" value="<?php echo $sale->customer_id;?>"/>
 	Amount:<input type="text" name="amount" value="<?php echo $sale->amount;?>"/>
 	
 	<input type="submit" value="update"/>

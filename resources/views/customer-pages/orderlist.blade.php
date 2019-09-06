@@ -22,7 +22,7 @@
 </style>
 @section('content')
 <div class="container">
-	<div class="row featured">
+	<div class="row featured">  
 		<table class="table">
 			<tr>
 				<td>SalesID</td>

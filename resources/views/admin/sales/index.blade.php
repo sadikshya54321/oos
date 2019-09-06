@@ -6,7 +6,7 @@
 	<tr>
 		<th>SN
 		</th>
-		<th>salesID
+		<th>CustomerId
 		</th>
 		<th>Amount
 		</th>
@@ -18,11 +18,11 @@
 <?php foreach($salArray as $sal) { ?>
    <tr>
    	<td><?php echo $i++ ?></td>
-	<td><?php echo $sal->sales_id;?></td>
+	<td><?php echo $sal->customer_id;?></td>
 	<td><?php echo $sal->amount;?></td>
 	<td>
 		<a  class="btn btn-success" href="/admin/sales/edit/<?php echo $sal->id ?>">Edit</a>&nbsp;
-		<a  class="btn btn-danger" href="/admin/sales/delete/<?php echo $sal->id ?>">Delete</a>
+		<a  class="btn btn-danger" href="/admin/sales/delete/<?php echo $sal->id ?>">Delete</a>&nbsp;
 		<a  class="btn btn-secondary" href="/admin/sales/detail/<?php echo $sal->id ?>">Detail</a></td>
    </tr>
 <?php }

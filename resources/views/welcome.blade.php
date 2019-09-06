@@ -107,6 +107,11 @@
                 margin-left: 50px;
             }
         </style>
+        <?php if(isset($msg) && $msg == 1){ ?>
+            <script>
+                alert ("added successfully");
+            </script>
+       <?php } ?>
     </head>
     <body>
         <div class="flex-center position-ref full-height">

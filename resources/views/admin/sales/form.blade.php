@@ -4,7 +4,7 @@
 	@csrf
 	<table>
 		<tr>
-			<th>SalesId</th><td><input type="text" name="sales_id"></td>
+			<th>CustomerId</th><td><input type="text" name="customer_id"></td>
 		</tr>
 		<tr>
 			<th>Amount</th><td><input type="text" name="amount"></td>

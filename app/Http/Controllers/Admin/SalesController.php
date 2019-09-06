@@ -22,7 +22,7 @@ class SalesController extends Controller
 
     public function update(Request $request, $id){
         $sale = Sale::find($id);
-        $sale->sales_id =$request->sales_id;
+        $sale->customer_id =$request->customer_id;
         $sale->amount =$request->amount;
       	$sale->save();
          return redirect('/admin/sales');
@@ -40,7 +40,7 @@ class SalesController extends Controller
 
      public function save(Request $request){
   	   $sale =new Sale();
-       $sale->sales_id=$request->sales_id;
+       $sale->customer_id=$request->customer_id;
        $sale->amount=$request->amount;
   	   if($sale->save()){
               echo "<script>alert('added successfully')</script>";
@@ -48,7 +48,7 @@ class SalesController extends Controller
         else{
             echo "<script>alert('not added')</script>";
         }
-       return redirect("sales");
+       return redirect("/admin/sales");
     }
 
     public function delete($id){
