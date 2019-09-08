@@ -16,7 +16,7 @@
 <title>Order Cake</title>
 <form action="/cakes/save" method="post" >
   @csrf
-  <table cellpadding="10" cellspacing="30">
+  <table class="table" cellpadding="100" cellspacing="300">
     <tr>
       <th>Base:</th>
       <td><input type="radio" name="base" value ="Halfpound">1/2 Pound 
@@ -36,7 +36,7 @@
       	<input type="radio" name="flavour" value="blackforest">Blackforest
       </td>
   </tr>
-  <tr>
+  <tr>  
 	<th>Toppings:</th>
       <td>
       	<input type="radio" name="toppings" value="icing">Icing
@@ -56,7 +56,7 @@
     <tr>
     	<th>Sugar:</th>
     	<td>
-    	<input type="radio" name="sugar" value="yes">Yes
+    	<input type="radio" name="sugar" value="yes">Yes 
     	<input type="radio" name="sugar" value="no">No
     </td>
 </tr>

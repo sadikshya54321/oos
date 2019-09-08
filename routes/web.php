@@ -27,7 +27,7 @@ Route::get('/orders/cart', "OrdersController@cart");
 Route::get('/orders/add-cart/{id}', "OrdersController@addToCart");
 Route::get('/orders/cart/empty', "OrdersController@emptyCart");
 Route::get('/cart/remove/{id}','OrdersController@removeItem');
-
+Route::get('/cart/checkout', 'OrdersController@checkout');
 Route::get('/cakes/index', "CakesController@index");
 Route::post('/cakes/save', "CakesController@save");
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\SaleItem;
 
 use Stripe\Stripe;
 use Stripe\Charge;
@@ -11,12 +12,13 @@ use Stripe\Charge;
 class OrdersController extends Controller
 {
     public function orderlist(){
+    	$sales = Sale::where('customer_id');
     	return view("customer-pages.orderlist");
     }
 
     public function emptyCart(Request $request){
     	$request->session()->forget('cart-item');
-    	echo "deleted";
+    	return redirect('/orders/cart');
     }
 
     public function removeItem(Request $request, $id){

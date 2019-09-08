@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cake;
-class CakesController extends Controller
+class CakesController extends Controller     
 {
     public function index(){
         return view('customer-pages.index');
     }
 
     public function Save(Request $request){
-        $order=new Order();
+        $order=new Cake();
         
         $order->base=$request->base;
         $order->flavour=$request->flavour;
@@ -23,9 +23,11 @@ class CakesController extends Controller
          if($order->save()){
             echo "<script>alert('added successfully')</script>";
         }
-        else{
+        else{   
             echo "<script>alert('not added')</script>";
         }
         return redirect('/cakes');
     }
 }
+
+   

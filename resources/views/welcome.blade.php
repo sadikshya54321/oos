@@ -81,8 +81,8 @@
                 margin-top: 50px;
                 height: 600px;
                 width: 100%;
-                background: #a22c2c;
-                color:red;
+                background: #9a5a41;
+                color:#5e3502;
             }
             .prod-img{
                 height:150px;
@@ -126,6 +126,13 @@
                             <a href="/search/find/<?php echo $c->id; ?>"> <?php echo $c->name ?></a>
                              
                          <?php } ?>
+                         <a class="nav-link" href="/orders/cart">{{__('Cart') }}
+                            <?php if(Session::get('cart-item') !=null) { ?>
+                                (<?php echo count(Session::get('cart-item')) ?>)
+                                <?php } else{ ?>
+                                    (0)
+                                <?php }?>
+                                </a>
                         <a href="{{url('home') }}"> Home</a>
                          
                     @else 

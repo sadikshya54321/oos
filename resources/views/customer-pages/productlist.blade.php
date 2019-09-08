@@ -40,7 +40,7 @@
                 background: grey;
                 border: 1px solid #red;
                 margin: 10px 10px;
-
+ 
             }
             .add-to-cart-btn{
                 background: green;

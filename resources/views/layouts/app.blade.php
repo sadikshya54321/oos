@@ -92,7 +92,12 @@
 
                             <li class="nav-item">
                                 <a class="nav-link" href="/orders/cart">{{ __(' Cart') }}
-                                    (<?php echo count(Session::get('cart-item')) ?>)</a>
+                                    <?php if(Session::get('cart-item') !=null){ ?>
+                                    (<?php echo count(Session::get('cart-item')) ?>)
+                                    <?php } else{ ?>
+                                        (0)
+                                    <?php }?>
+                                    </a>
                             </li>
                             
                         
