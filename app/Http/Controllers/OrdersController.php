@@ -8,12 +8,15 @@ use App\SaleItem;
 
 use Stripe\Stripe;
 use Stripe\Charge;
+use App\Cake;
+use Auth;
 
 class OrdersController extends Controller
 {
     public function orderlist(){
-    	$sales = Sale::where('customer_id');
-    	return view("customer-pages.orderlist");
+    	$sales = SaleItem::where('customer_id');
+        $customorder = Cake::where('customer_id', '=', Auth::User()->id)->get();
+    	return view("customer-pages.orderlist", compact('customorder'));
     }
 
     public function emptyCart(Request $request){

@@ -32,7 +32,7 @@
             background:#5e3502;
         }
         .card-body{
-            border:1px solid #5e3502;
+            border:1px solid #ddd;
         }
         .btn-primary{
             background:#5e3502;
@@ -83,6 +83,7 @@
                                 </li>
                             @endif
                         @else
+                        <li><a class="nav-link" href="/custom-order">Customize your cake</a></li>
                         <li class="nav-item">
                                 <a class="nav-link" href="/payments/list">{{ __(' My Payments') }}</a>
                             </li>

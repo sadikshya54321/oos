@@ -14,55 +14,55 @@
 <div class="container">
 	<div class="row featured">  
 <title>Order Cake</title>
-<form action="/cakes/save" method="post" >
+<form action="/cakes/save" method="post" id="cakeform">
   @csrf
   <table class="table" cellpadding="100" cellspacing="300">
     <tr>
-      <th>Base:</th>
-      <td><input type="radio" name="base" value ="Halfpound">1/2 Pound 
-        <input type="radio" name="base" value="1pound">1 Pound 
-        <input type="radio" name="base" value="2pounds">2 pounds 
-        <input type="radio" name="base" value="2&halfpounds">2 & halfpounds 
-    	<input type="radio" name="base" value="3pounds">3 Pounds 
+      <th>Cake Base:</th>
+      <td><input type="radio" name="base" value="halfpound">&nbsp;1/2 Pound  <br/><br/>
+        <input type="radio" name="base" value="1pound">&nbsp;1 Pound <br/><br/>
+        <input type="radio" name="base" value="2pounds">&nbsp;2 pounds <br/><br/>
+        <input type="radio" name="base" value="twoandhalfpounds">&nbsp;2 & halfpounds <br/><br/>  
+    	<input type="radio" name="base" value="3pounds">&nbsp;3 Pounds 
       </td>
   </tr>
   <tr>
       <th>Flavour:</th>
-      <td><input type="radio" name="flavour" value="chocolate">Chocolates
-      	<input type="radio" name="flavour" value="vanilla">Vanilla
-      	<input type="radio" name="flavour" value="strawberry">Strawberry
-      	<input type="radio" name="flavour" value="redvelvet">Red Velvet
-      	<input type="radio" name="flavour" value="butterscotch">Butterscotch
-      	<input type="radio" name="flavour" value="blackforest">Blackforest
+      <td><input type="radio" name="flavour" value="chocolate">&nbsp;Chocolates<br/><br/>
+      	<input type="radio" name="flavour" value="vanilla">&nbsp;Vanilla<br/><br/>
+      	<input type="radio" name="flavour" value="strawberry">&nbsp;Strawberry<br/><br/>
+      	<input type="radio" name="flavour" value="redvelvet">&nbsp;Red Velvet<br/><br/>
+      	<input type="radio" name="flavour" value="butterscotch">&nbsp;Butterscotch<br/><br/>
+      	<input type="radio" name="flavour" value="blackforest">&nbsp;Blackforest<br/><br/>
       </td>
   </tr>
   <tr>  
 	<th>Toppings:</th>
       <td>
-      	<input type="radio" name="toppings" value="icing">Icing
-      	<input type="radio" name="toppings" value="candies">Candies
-      	<input type="radio" name="toppings" value="fruits">Fruits
-      	<input type="radio" name="toppings" value="powdered sugar">Powdered sugar
+      	<input type="radio" name="toppings" value="icing">&nbsp;Icing
+      	<input type="radio" name="toppings" value="candies">&nbsp;Candies
+      	<input type="radio" name="toppings" value="fruits">&nbsp;Fruits
+      	<input type="radio" name="toppings" value="powdered sugar">&nbsp;Powdered sugar
       </td>
   </tr>
   <tr>
   	<th>Type:</th>
       <td>
-      	<input type="radio" name="type" value="egg">Egg
-      	<input type="radio" name="type" value="eggless">Eggless
+      	<input type="radio" name="type" value="egg">&nbsp;Egg
+      	<input type="radio" name="type" value="eggless">&nbsp;Eggless
       </td>
     </tr>
 
     <tr>
     	<th>Sugar:</th>
     	<td>
-    	<input type="radio" name="sugar" value="yes">Yes 
-    	<input type="radio" name="sugar" value="no">No
+    	<input type="radio" name="sugar" value="yes">&nbsp;Yes 
+    	<input type="radio" name="sugar" value="no">&nbsp;No
     </td>
 </tr>
 <tr>
 	<td>
-		<input type="submit" value="Make cake" class="btn btn-info"></td>
+		<input type="submit" value="Place Order" class="btn btn-info"></td>
 	</tr>
     </table>
 </form>

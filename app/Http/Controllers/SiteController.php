@@ -9,8 +9,9 @@ class SiteController extends Controller
 {
     public function index(Request $request) {
     	$msg=$request->session()->get('order-placed-msg');
-    	if($msg==1) 
-    		$request->session()->put('oprder-placed-msg',0);
+    	if($msg != null) {
+    		$request->session()->put('order-placed-msg', '');
+    	}
 
     	$products = Product::all();
     	$categories= Category::all();

@@ -81,7 +81,7 @@
                 margin-top: 50px;
                 height: 600px;
                 width: 100%;
-                background: #9a5a41;
+                background: #e4d7d0;
                 color:#5e3502;
             }
             .prod-img{
@@ -136,10 +136,11 @@
                         <a href="{{url('home') }}"> Home</a>
                          
                     @else 
+                        
+                        <a href="/custom-order">Customize your cake</a>
                         <a href="{{ route('login') }}"> Customer Login</a>
-
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}"> Sign up</a>
+                        <a href="{{ route('register') }}"> Customer Sign up</a>
                     @endif
                     @endauth
                 </div>

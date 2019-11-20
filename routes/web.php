@@ -12,6 +12,10 @@
 */
 
 Route::get('/',  'SiteController@index');
+Route::get('/custom-order', function() {
+    return view('customer-pages.index');
+    
+});
 
 
 Auth::routes();
