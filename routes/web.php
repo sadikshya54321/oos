@@ -18,6 +18,9 @@ Route::get('/custom-order', function() {
 });
 
 
+Route::get('/Reports/orders', 'ReportsController@orders');
+Route::get('/Reports/customers', 'ReportsController@customers');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
